@@ -21,8 +21,9 @@ A centralized backend or single LLM API creates a centralized judge. One operato
 | Intelligent Contract | `contracts/Rewards.py`, deployed source commit `23551558807073dacebf5659f62217f6d9ee8cba` |
 | Frontend | React/Vite/TypeScript in `apps/web/` |
 | Network | GenLayer Studionet, chain ID `61999` |
-| Contract | `[PENDING]` |
-| Deployment transaction | `[PENDING]` |
+| Contract | `0xC7D42a014Ee97D4Ee33A8A723F5fDfA97750efBe` |
+| Deployment transaction | `0xa714fdfc284e168b66f2297be59299063c179f9b8d6e9b5ddb6ef6f7366e5854` |
+| Website URL | [https://rewards-two-delta.vercel.app](https://rewards-two-delta.vercel.app) |
 | Tests | 47 pytest total; 11 use `direct_deploy`; 21 frontend Vitest tests |
 | CI | Contract, web, and hygiene jobs are configured; verify the latest run in Actions |
 
@@ -116,7 +117,7 @@ V1 deliberately focuses on one guarantee, one issuer, one named beneficiary, and
 
 ## Recurring Guarantees milestone
 
-The original Rewards path remains a single guarantee with one redemption lifecycle and one terminal settlement. The recurring coverage milestone adds a separate parent agreement containing 2–12 predefined fixed-duration epochs. Each epoch has its own eligibility, evidence review, provisional result, challenge, and settlement; deterministic code applies the frozen outcome basis points to an equal per-epoch liability. Beneficiary payouts reduce parent remaining liability immediately. Unused liability stays in the parent until every epoch is terminal, then anyone can finalize the parent and refund the remainder to the issuer. The milestone contract is deployed on Studionet at `[PENDING]`; its three-epoch live protocol cycle is recorded in [RECURRING_LIVE_VERIFICATION.md](docs/RECURRING_LIVE_VERIFICATION.md). That cycle used a clearly labeled synthetic evidence fixture and is not a production service attestation. See [MILESTONE.md](docs/MILESTONE.md) for the baseline evidence and milestone delta.
+The original Rewards path remains a single guarantee with one redemption lifecycle and one terminal settlement. The recurring coverage milestone adds a separate parent agreement containing 2–12 predefined fixed-duration epochs. Each epoch has its own eligibility, evidence review, provisional result, challenge, and settlement; deterministic code applies the frozen outcome basis points to an equal per-epoch liability. Beneficiary payouts reduce parent remaining liability immediately. Unused liability stays in the parent until every epoch is terminal, then anyone can finalize the parent and refund the remainder to the issuer. The milestone contract is deployed on Studionet at `0xC7D42a014Ee97D4Ee33A8A723F5fDfA97750efBe`; its three-epoch live protocol cycle is recorded in [RECURRING_LIVE_VERIFICATION.md](docs/RECURRING_LIVE_VERIFICATION.md). That cycle used a clearly labeled synthetic evidence fixture and is not a production service attestation. See [MILESTONE.md](docs/MILESTONE.md) for the baseline evidence and milestone delta.
 
 ## Repository structure
 
@@ -154,4 +155,4 @@ Configure `VITE_Rewards_CONTRACT_ADDRESS` from `.env.example`; never commit secr
 
 ## Deployment
 
-The recurring milestone deployment is on GenLayer Studionet 61999 at `[PENDING]`. Its deployment transaction is `[PENDING]`. For a Vercel frontend deployment, set `VITE_Rewards_CONTRACT_ADDRESS`, `VITE_Rewards_CHAIN_ID`, and `VITE_Rewards_RPC_URL` from [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
+The recurring milestone deployment is on GenLayer Studionet 61999 at `0xC7D42a014Ee97D4Ee33A8A723F5fDfA97750efBe`. Its deployment transaction is `0xa714fdfc284e168b66f2297be59299063c179f9b8d6e9b5ddb6ef6f7366e5854`. For a Vercel frontend deployment, set `VITE_Rewards_CONTRACT_ADDRESS`, `VITE_Rewards_CHAIN_ID`, and `VITE_Rewards_RPC_URL` from [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
