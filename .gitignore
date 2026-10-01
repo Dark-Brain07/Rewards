@@ -1,0 +1,8 @@
+.env
+node_modules/
+dist/
+.pytest_cache/
+__pycache__/
+.venv/
+artifacts/*.local.*
+apps/web/dev-server*.log
